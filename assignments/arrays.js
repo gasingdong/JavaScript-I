@@ -64,7 +64,11 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
 
-//Implement a binary search since the array is already sorted by id
+//We could just do it the easy way and assume the 33rd id is at the 32nd index
+let car33 = inventory[32];
+console.log(`Car 33 is a`, car33.car_year, car33.car_make, car33.car_model);
+
+//But we could do better and actually search for it by implementing a binary search on the array since it's already sorted
 function findCar(id) {
     let start = 0;
     let end = inventory.length - 1;
@@ -90,7 +94,7 @@ function findCar(id) {
 //STRETCH: Experimenting with callbacks
 function outputCar(id, callback) {
     const car = findCar(id);
-    callback(`Car`, id, `is a`, car33.car_year, car33.car_make, car33.car_model);
+    callback(`Car ` + id + ` is a ` + car.car_year + ` ` + car.car_make + ` ` + car.car_model);
 }
 
 function log(str) {
