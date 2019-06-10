@@ -86,9 +86,18 @@ function findCar(id) {
     }
     return car;
 }
-const id = 33;
-const car33 = findCar(id);
-console.log(`Car`, id, `is a`, car33.car_year, car33.car_make, car33.car_model);
+
+//STRETCH: Experimenting with callbacks
+function outputCar(id, callback) {
+    const car = findCar(id);
+    callback(`Car`, id, `is a`, car33.car_year, car33.car_make, car33.car_model);
+}
+
+function log(str) {
+    console.log(str);
+}
+
+outputCar(33, log);
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
