@@ -84,7 +84,7 @@ console.log(antoinetta.gender);
 
 //Generic function that could be added to any object to get them to speak their name
 const speak = function() {
-  return "Hello, my name is " + this.name;
+  return `Hello, my name is ${this.name}`;
 }
 kennan.speak = speak;
 console.log(kennan.speak());
@@ -107,19 +107,19 @@ const parent = {
   "name": "Susan",
   "age": 70,
   speak: function() {
-    return "Hello, I'm " + this.name + "!";
+    return `Hello, I'm ${this.name}!`;
   },
   child: {
     "name": "George",
     "age": 50,
     speak: function() {
-      return "Hello, my name is " + this.name + "!";
+      return `Hello, my name is ${this.name}!`;
     },
     grandchild: {
       "name": "Sam",
       "age": 30,
       speak: function() {
-        return "Hello, my name's " + this.name + "!";
+        return `Hello, my name's ${this.name}!`;
       }
     }
   }
