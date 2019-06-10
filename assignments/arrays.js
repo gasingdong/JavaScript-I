@@ -94,7 +94,7 @@ function findCar(id) {
 //STRETCH: Experimenting with callbacks
 function outputCar(id, callback) {
     const car = findCar(id);
-    callback(`Car ` + id + ` is a ` + car.car_year + ` ` + car.car_make + ` ` + car.car_model);
+    callback(`Car ${id} is a ${car.car_year} ${car.car_make} ${car.car_model}`);
 }
 
 function log(str) {
