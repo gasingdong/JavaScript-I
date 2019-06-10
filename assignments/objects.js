@@ -30,10 +30,7 @@ const kennan = {
   "id": 2,
   "name": "Kennan",
   "email": "kdiben1@tinypic.com",
-  "gender": "M",
-  speak: function() {
-    return "Hello, my name is " + this.name;
-  }
+  "gender": "M"
 }
 
 const keven = {
@@ -85,6 +82,11 @@ console.log(antoinetta.gender);
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
 
+//Generic function that could be added to any object to get them to speak their name
+const speak = function() {
+  return "Hello, my name is " + this.name;
+}
+kennan.speak = speak;
 console.log(kennan.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
